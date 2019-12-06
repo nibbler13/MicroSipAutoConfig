@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.161
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroSipAutoConfig", "MicroSipAutoConfig\MicroSipAutoConfig.csproj", "{0B99C8EF-23AF-495C-8033-A28E8A68BC39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B99C8EF-23AF-495C-8033-A28E8A68BC39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B99C8EF-23AF-495C-8033-A28E8A68BC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B99C8EF-23AF-495C-8033-A28E8A68BC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B99C8EF-23AF-495C-8033-A28E8A68BC39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02C14762-23D3-4322-92A6-763EA4604AC9}
+	EndGlobalSection
+EndGlobal
