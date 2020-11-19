@@ -63,11 +63,6 @@ namespace MicroSipAutoConfig {
 				Logging.ToLog(e.Message + Environment.NewLine + e.StackTrace);
 			}
 
-
-
-
-
-
 			string destinationPath = DESTINATION_PATH.Replace("@userName", Environment.UserName);
 			string processToStart = Path.Combine(destinationPath, "microsip.exe");
 
@@ -195,7 +190,7 @@ namespace MicroSipAutoConfig {
 
 			Logging.ToLog("Изменение файла настроек: " + destSettingsFile);
 			try {
-				List<string> settings = File.ReadAllLines(destSettingsFile).ToList();
+				List<string> settings = File.ReadAllLines(destSettingsFile, Encoding.GetEncoding("windows-1251")).ToList();
 
 				Dictionary<string, string> settingsToChange = new Dictionary<string, string> {
 					{ "label=", label },
@@ -225,14 +220,13 @@ namespace MicroSipAutoConfig {
 				}
 
 				Logging.ToLog("Запись настроек в файл: " + destinationPath);
-				File.WriteAllLines(destSettingsFile, settings);
+				File.WriteAllLines(destSettingsFile, settings, Encoding.GetEncoding("windows-1251"));
 			} catch (Exception e) {
 				Logging.ToLog(e.Message + Environment.NewLine + e.StackTrace);
 			}
 
 			Logging.ToLog("Создание ярлыка на рабочем столе для MicroSIP.exe");
 			try {
-
 				object shDesktop = (object)"Desktop";
 				IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
 				string shortcutAddress = (string)shell.SpecialFolders.Item(ref shDesktop) + @"\MicroSIP.lnk";
